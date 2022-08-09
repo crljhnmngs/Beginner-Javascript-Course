@@ -147,7 +147,7 @@ console.log(parseInt('5'));
 console.log(parseFloat('5.14'));
 console.log(String(500));
 console.log((500).toString());
-console.log(Boolean(10)); // null undefined 0 '' Nan - will return
+console.log(Boolean(10)); // null undefined 0 '' Nan - will return false
 console.log(Boolean(null));
 
 */
@@ -318,3 +318,51 @@ testFn();
 //Global scope - The global scope outside the block and function. Global scope is accessible inside the block and function.
 
 */
+
+/*
+--------Variables----------
+----------DATA TYPES--------------
+--------OPERATORS---------
+---------TYPE OF CONVERTIONS--------
+-----------EQUALITY---------
+*/
+//1: Print all even numbers from 0 – 10
+function getEven() {
+    for (let i = 1; i <= 10; i++) {
+        if (i % 2 == 0) {
+            console.log(i);
+        }
+    }
+}
+//getEven();
+
+//2. Print a table containing multiplication tables
+
+function multiTalbe() {
+    let result = ' x ';
+
+    for (i = 0; i <= 10; i++) {
+        for (j = 0; j <= 10; j++) {
+            if (i === 0 && j > 0) {
+                result += '[' + j + ']';
+            } else if (j === 0 && i > 0) {
+                result += '[' + i + '] ';
+            } else if (i > 0 && j > 0) {
+                result = result + i * j + '  ';
+            }
+        }
+        result += '\n';
+    }
+    console.log(result);
+}
+//multiTalbe();
+
+//3. Create a length converter function
+function KmToMi(kilometer) {
+    const milesInMeter = 1609.34;
+    const kmToM = kilometer * 1000;
+    const result = kmToM / milesInMeter;
+
+    console.log(parseFloat(result).toFixed(5));
+}
+//KmToMi(1);
